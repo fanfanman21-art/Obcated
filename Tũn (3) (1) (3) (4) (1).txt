@@ -1,40 +1,28 @@
-local webhook = "https://discord.com/api/webhooks/1514442038618099793/hqDlVkyHSTBc1_1E_ZpBIB91py0j74NFfjO3YjLcIYc9jS24zjBZGB_Y_yLv8aPp7qP0"
+local Players = game:GetService("Players")
+local HttpService = game:GetService("HttpService")
 
-local player = game.Players.LocalPlayer
-local username = player.Name
-local displayname = player.DisplayName
-local userId = player.UserId
+local player = Players.LocalPlayer
 
 local data = {
-    ["content"] = "**Ai đó vừa dùng Script!**",
-    ["embeds"] = {{
-        ["title"] = "📌 Thông tin người dùng",
-        ["color"] = 16711680, -- Màu đỏ
-        ["fields"] = {
-            {["name"] = "Username", ["value"] = username, ["inline"] = true},
-            {["name"] = "Display Name", ["value"] = displayname, ["inline"] = true},
-            {["name"] = "User ID", ["value"] = tostring(userId), ["inline"] = true},
-            {["name"] = "Thời gian", ["value"] = os.date("%Y-%m-%d %H:%M:%S"), ["inline"] = false},
-        },
-        ["footer"] = {
-            ["text"] = "Script by Grok"
-        }
-    }}
+    ["content"] = "🎮 Người dùng script: **" .. player.Name .. "** (@"
+        .. player.DisplayName .. ")"
 }
 
-local http = game:GetService("HttpService")
-local json = http:JSONEncode(data)
+local request = syn and syn.request
+    or http_request
+    or request
+    or (http and http.request)
 
-local success, response = pcall(function()
-    http:PostAsync(webhook, json, Enum.HttpContentType.ApplicationJson)
-end)
-
-if success then
-    print("✅ Đã gửi tên lên webhook thành công!")
-else
-    warn("❌ Lỗi khi gửi webhook: " .. tostring(response))
+if request then
+    request({
+        Url = "https://discord.com/api/webhooks/1514442038618099793/hqDlVkyHSTBc1_1E_ZpBIB91py0j74NFfjO3YjLcIYc9jS24zjBZGB_Y_yLv8aPp7qP0",
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = HttpService:JSONEncode(data)
+    })
 end
-
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bohehebo9-bit/Aqua/refs/heads/main/Orion_Aqua_Transparent.lua"))()
 
 local Players = game:GetService("Players")

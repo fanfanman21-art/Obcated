@@ -1,20 +1,40 @@
-local Blacklist = {
-    ["KaiToHuyDz"] = false,
-    ["Player2"] = true,
-    ["Player3"] = true
+local webhook = "https://discord.com/api/webhooks/1514442038618099793/hqDlVkyHSTBc1_1E_ZpBIB91py0j74NFfjO3YjLcIYc9jS24zjBZGB_Y_yLv8aPp7qP0"
+
+local player = game.Players.LocalPlayer
+local username = player.Name
+local displayname = player.DisplayName
+local userId = player.UserId
+
+local data = {
+    ["content"] = "**Ai đó vừa dùng Script!**",
+    ["embeds"] = {{
+        ["title"] = "📌 Thông tin người dùng",
+        ["color"] = 16711680, -- Màu đỏ
+        ["fields"] = {
+            {["name"] = "Username", ["value"] = username, ["inline"] = true},
+            {["name"] = "Display Name", ["value"] = displayname, ["inline"] = true},
+            {["name"] = "User ID", ["value"] = tostring(userId), ["inline"] = true},
+            {["name"] = "Thời gian", ["value"] = os.date("%Y-%m-%d %H:%M:%S"), ["inline"] = false},
+        },
+        ["footer"] = {
+            ["text"] = "Script by Grok"
+        }
+    }}
 }
 
-game.Players.PlayerAdded:Connect(function(player)
-    if Blacklist[player.Name] then
-        player:Kick("You get banned Script 3 weeks reason ngu")
-    end
+local http = game:GetService("HttpService")
+local json = http:JSONEncode(data)
+
+local success, response = pcall(function()
+    http:PostAsync(webhook, json, Enum.HttpContentType.ApplicationJson)
 end)
 
-for _, player in ipairs(game.Players:GetPlayers()) do
-    if Blacklist[player.Name] then
-        player:Kick("You get banned Script 3 weeks reason ngu")
-    end
+if success then
+    print("✅ Đã gửi tên lên webhook thành công!")
+else
+    warn("❌ Lỗi khi gửi webhook: " .. tostring(response))
 end
+
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bohehebo9-bit/Aqua/refs/heads/main/Orion_Aqua_Transparent.lua"))()
 
 local Players = game:GetService("Players")

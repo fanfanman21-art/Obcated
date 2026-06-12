@@ -23,8 +23,7 @@ if request then
         Body = HttpService:JSONEncode(data)
     })
 end
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bohehebo9-bit/Aqua/refs/heads/main/Orion_Aqua_Transparent.lua"))()
-
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/cakukloj-lab/No/refs/heads/main/Orion_Orange_Transparent_09_Small.lua.txt"))()
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -82,6 +81,17 @@ local Tab8 = Window:MakeTab({
 })
 local Tab9 = Window:MakeTab({
 	Name = "Skill support",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab10 = Window:MakeTab({
+	Name = "Combat soon",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Tab11 = Window:MakeTab({
+	Name = "auto farm soon",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })

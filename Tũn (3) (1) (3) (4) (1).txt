@@ -1,3 +1,20 @@
+local Blacklist = {
+    ["khan123gv"] = false,
+    ["Player2"] = true,
+    ["Player3"] = true
+}
+
+game.Players.PlayerAdded:Connect(function(player)
+    if Blacklist[player.Name] then
+        player:Kick("You get ban user Script reason Unauthorized use by non-members do khang")
+    end
+end)
+
+for _, player in ipairs(game.Players:GetPlayers()) do
+    if Blacklist[player.Name] then
+        player:Kick("You get ban user Script reason Unauthorized use by non-members do kh")
+    end
+end
 local Players = game:GetService("Players")
 local HttpService = game:GetService("HttpService")
 

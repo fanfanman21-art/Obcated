@@ -6,13 +6,13 @@ local Blacklist = {
 
 game.Players.PlayerAdded:Connect(function(player)
     if Blacklist[player.Name] then
-        player:Kick("You get ban user Script reason Unauthorized use by non-members do khang")
+        player:Kick("You get ban user Script reason Use the shared script name khan123 ")
     end
 end)
 
 for _, player in ipairs(game.Players:GetPlayers()) do
     if Blacklist[player.Name] then
-        player:Kick("You get ban user Script reason Unauthorized use by non-members do kh")
+        player:Kick("You get ban user Script reason Use the shared script name khan123")
     end
 end
 local Players = game:GetService("Players")

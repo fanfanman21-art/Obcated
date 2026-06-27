@@ -1,5 +1,5 @@
 local Blacklist = {
-    "Anhthingvip",
+    "Anhth",
     "NguoiChoi2",
     "TenRobloxCanChan"
 }

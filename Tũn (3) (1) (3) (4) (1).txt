@@ -1,7 +1,10 @@
 local Blacklist = {
     "vljtfc",
-    "NguoiChoi2",
-    "TenRobloxCanChan"
+    "58p7hDkl",
+    "lamgaming20011"
+    "hudjjsgs"
+    "saoxuyen012"
+
 }
 
 local player = game:GetService("Players").LocalPlayer

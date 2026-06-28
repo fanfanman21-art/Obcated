@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({
-    Name = "Dragon Blox summer choose🏝️",
+    Name = "ngừng update vô thời hạn",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "KhangCaoConfig"
@@ -20,7 +20,7 @@ Tab:AddLabel("có thể dùng script có icon 🔘")
 Tab:AddButton({
 	Name = "Dungeon Atom🔘",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/caiausjoncit-design/Iq999/refs/heads/main/Kk"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/caiausjoncit-design/Duyvel/refs/heads/main/obfuscated_script-1782641048495.lua.txt"))()
 	end
 })
 Tab:AddButton({

@@ -13,3 +13,26 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddLabel("Script đang update, vui lòng chờ...")
+
+
+Tab:AddLabel("Hiện tại tao đang lm Script new👇")
+
+Tab:AddButton({
+	Name = "Không phiền thì sài Script droid đi đợi vài ngày",
+	Callback = function()
+		if setclipboard then
+			setclipboard('loadstring(game:HttpGet("https://raw.githubusercontent.com/thinhjothinhphan-prog/UeuJz/refs/heads/main/obfuscated_script-1781249062317.lua.txt"))()')
+			OrionLib:MakeNotification({
+				Name = "Thành công",
+				Content = "Đã copy vào clipboard!",
+				Time = 3
+			})
+		else
+			OrionLib:MakeNotification({
+				Name = "Lỗi",
+				Content = "Executor của bạn không hỗ trợ clipboard!",
+				Time = 3
+			})
+		end
+	end
+})

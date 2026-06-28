@@ -1,13 +1,13 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({
-    Name = "Summer Update ⌛",
+    Name = "Dragon Blox summer choose🏝️",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "KhangCaoConfig"
 })
 
 local Tab = Window:MakeTab({
-    Name = "Summer Update⌛",
+    Name = "Summer Choose Scrip",
     Icon = "rbxassetid://4483362458",
     PremiumOnly = false
 })
@@ -15,24 +15,66 @@ local Tab = Window:MakeTab({
 Tab:AddLabel("Script đang update, vui lòng chờ...")
 
 
-Tab:AddLabel("Hiện tại tao đang lm Script new👇")
+Tab:AddLabel("có thể dùng script có icon 🔘")
 
 Tab:AddButton({
-	Name = "Không phiền thì sài Script droid đi đợi vài ngày",
+	Name = "Dungeon Atom🔘",
 	Callback = function()
-		if setclipboard then
-			setclipboard('loadstring(game:HttpGet("https://raw.githubusercontent.com/thinhjothinhphan-prog/UeuJz/refs/heads/main/obfuscated_script-1781249062317.lua.txt"))()')
-			OrionLib:MakeNotification({
-				Name = "Thành công",
-				Content = "Đã copy vào clipboard!",
-				Time = 3
-			})
-		else
-			OrionLib:MakeNotification({
-				Name = "Lỗi",
-				Content = "Executor của bạn không hỗ trợ clipboard!",
-				Time = 3
-			})
-		end
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/caiausjoncit-design/Iq999/refs/heads/main/Kk"))()
 	end
 })
+Tab:AddButton({
+	Name = "Crimson Summer🔘⌛",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/caiausjoncit-design/Jiji/refs/heads/main/Hehe"))()
+	end
+})
+Tab:AddButton({
+	Name = "Droid🔘",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/caiausjoncit-design/N-bba/refs/heads/main/Hehe%20(1).txt"))()
+	end
+})
+local Section = Tab:AddSection({
+    Name = "Chưa hoàn thành⌛"
+})
+Tab:AddButton({
+	Name = "Dungeon droid 🔨⌛",
+	Callback = function()
+	end
+})
+Tab:AddButton({
+	Name = "Dungeon Hideout 🔨⌛",
+	Callback = function()
+	end
+})
+Tab:AddButton({
+	Name = "Dungeon Mecha ⌛",
+	Callback = function()
+	end
+})
+Tab:AddButton({
+	Name = "Trading plaza ⌛",
+	Callback = function()
+	end
+})
+Tab:AddButton({
+	Name = "Main world ⌛",
+	Callback = function()
+	end
+})
+Tab:AddButton({
+	Name = "Coming soon⌛",
+	Callback = function()
+	end
+})
+local Section = Tab:AddSection({
+    Name = "⌛ là cần đợi 🔘 là Script hoạt động ổn định 🎁 Là event Coming soon "
+})
+local Section = Tab:AddSection({
+    Name = "❌ là không ổn định Bị xoá"
+})
+local Section = Tab:AddSection({
+    Name = "🔨 đang fix có thể sử dụng nhưng bị lỗi gì chịu"
+})
+

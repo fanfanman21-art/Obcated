@@ -11,9 +11,21 @@ local Tab = Window:MakeTab({
     Icon = "rbxassetid://4483362458",
     PremiumOnly = false
 })
+Tab:AddButton({
+    Name = "Join Discord Get Script New",
+    Callback = function()
+        if identifyexecutor and (syn and syn.request) then
+            setclipboard("https://discord.gg/UrEVRKH8F")
+        end
 
+        if open_url then
+            open_url("https://discord.gg/UrEVRKH8F")
+        else
+            setclipboard("https://discord.gg/UrEVRKH8F")
+        end
+    end
+})
 Tab:AddLabel("Script đang update, vui lòng chờ...")
-
 
 Tab:AddLabel("có thể dùng script có icon 🔘")
 
